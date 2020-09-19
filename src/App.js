@@ -13,6 +13,8 @@ function App() {
     }
     return [];
   });
+  const [chaggesState, setChaggesState] = useState(Boolean);
+
   const [newProjects, setNewProjects] = useState("");
   useEffect(() => {
     localStorage.setItem("@projectos:repositorios", JSON.stringify(projects));
@@ -25,7 +27,22 @@ function App() {
   return (
     <>
       <Header title="Todos" />
-      <Projects list={projects} />
+      <div className="box">
+        {projects.map((project) => (
+          <div className="item" key={project.name}>
+            <input
+              type="checkbox"
+              name={project.name}
+              id={project.name}
+              checked={chaggesState}
+              onChange={(e) => {
+                setChaggesState(!!project.state);
+              }}
+            />
+            <p>{project.name}</p>
+          </div>
+        ))}
+      </div>
       <div className="box">
         <div className="item">
           <input
