@@ -30,7 +30,6 @@
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
-- Reatct
 - [ReactJS ](https://reactjs.org/)
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Webt)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web)
